@@ -34,11 +34,15 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted. New id: " + newSeller.getId());
 		
-		System.out.println("\n                 TEST 4 : UPDATE (seller)");
+		System.out.println("\n                 TEST 5 : UPDATE (seller)");
 		s = sellerDao.findById(1);
 		s.setName("Parker");
 		sellerDao.update(s);
 		System.out.println("Updated.");
+		
+		System.out.println("\n                 TEST 6 : DELETE (seller)");
+		sellerDao.deleteById(newSeller.getId());
+		System.out.println("Deleted.");
 	}
 
 }
